@@ -4,6 +4,7 @@
 #include <string>
 #include <sstream>
 #include "GradeManager.h"
+#include "MainMenu.h"
 
 using namespace std;
 
@@ -30,19 +31,16 @@ public:
 		}
 	}
 	void assignGrade() {
-		if (avg >= 90 || avg == 100) {
+		if (avg >= 90) {
 			grade = 'A';
 		}
-		else if (avg >= 80 || avg == 89)
-		{
+		else if (avg >= 80) {
 			grade = 'B';
 		}
-		else if (avg >= 70 || avg == 79)
-		{
+		else if (avg >= 70) {
 			grade = 'C';
 		}
-		else if (avg >= 60 || avg == 69)
-		{
+		else if (avg >= 60) {
 			grade = 'D';
 		}
 		else {
@@ -55,6 +53,7 @@ public:
 void GradeManager::gradeManager() {
 	vector<Student> students;
 	string line;
+	char yn;
 
 	ifstream infile("students.txt");
 
@@ -84,5 +83,12 @@ void GradeManager::gradeManager() {
 
 	infile.close();
 
-	cin.get();
+	cout << "\nWould you like to go back to the menu? [y/n]: ";
+	cin >> yn;
+
+	if (yn == 'y' || yn == 'Y')
+	{
+		MainMenu menu;
+		menu.mainMenu();
+	}
 }

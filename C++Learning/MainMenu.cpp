@@ -21,17 +21,17 @@ void displayMenu(const vector<string>& options, int selected) {
 		else
 			cout << "  ";
 
-		cout << "Option " << i + 1 << ": " << options[i] << "\n";
+		cout << "Option " << i + 1 << ": " << options[i] << "\n" << endl;
 	}
 	cout << "==================================\n";
-	cout << "Use the Up/Down keys or press 1/2, then Enter.\n";
+	cout << "Use the Up/Down keys or press [1-9], then Enter.\n";
 }
 
 void MainMenu::mainMenu() {
 	vector<string> options = {
 		"Is Even\n\tDescription:\n\tAsks the user to input a number and checks if it is even,\n\tthen shows all the numbers from 0 to n that are even.",
 		"Test Scores\n\tDescription:\n\tGets the user to input a desired amount of test scores,\n\tthen shows the average, min, and max of the scores.",
-		"Grade Score Manager\n\tDescription:\n\tTBD"
+		"Grade Score Manager\n\tDescription:\n\tReads from a provided \".txt\" file then calculates the averages of each students grade,\n\tand give them a letter grade and ouputs to a new \".txt\" file.",
 	};
 
 	int selected = 0;

@@ -29,7 +29,6 @@ int IsEven::isEven() {
 	if (a <= 0)
 	{
 		cout << "Please enter a positive number." << endl;
-		return 1;
 	}
 
 	if (a % 2 == 0)
@@ -39,7 +38,6 @@ int IsEven::isEven() {
 	else {
 		cout << a << " is not an even number" << endl;
 
-		return 1;
 	}
 
 	printEvenNumbers(a);
