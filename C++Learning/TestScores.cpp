@@ -4,68 +4,51 @@
 
 using namespace std;
 
-double calculateAverage(int scores[], int size) {
+const int MAX_SCORES = 100;
+
+void calculateScores(int scores[], int size) {
 	int sum = 0;
-	double avg;
+	int max = scores[0];
+	int min = scores[0];
 
 	for (size_t i = 0; i < size; i++)
 	{
 		sum += scores[i];
+		if (scores[i] > max) max = scores[i];
+		if (scores[i] < min) min = scores[i];
 	}
 
-	avg = (double)sum / size;
+	double avg = (double)sum / size;
 
 	cout << "Average score: " << avg <<  endl;
-
-	return avg;
-}
-
-int findMax(int scores[], int size) {
-	int max = 0;
-
-	for (size_t i = 0; i < size; i++)
-	{
-		if (scores[i] > max)
-		{
-			max = scores[i];
-		}
-	}
-	
 	cout << "Highest score: " << max << endl;
-
-	return max;
+	cout << "Lowest score: " << min << endl;
 }
 
-int findMin(int scores[], int size) {
-	int min = scores[0];
-	
-	for (size_t i = 0; i < size; i++)
-	{
-		if (scores[i] < min)
-		{
-			min = scores[i];
-		}
-	}
+bool yesNo(const string& message) {
+	char yn;
 
-	cout << "Lowest score: " << min << endl;
+	cout << message << " [y/n]: ";
+	cin >> yn;
 
-	return min;
+	return (yn == 'y' || yn == 'Y');
 }
 
 void TestScores::testScores() {
 	int size;
-	int scores[100];
+	int scores[MAX_SCORES];
 	bool cont = true;
-	char yn;
 
 	do
 	{
-		cout << "How many test scores would you like to enter? (max 100): ";
+		cout << "How many test scores would you like to enter? (" << MAX_SCORES << "): ";
 		cin >> size;
 
-		if (size > 100 || size < 1)
+		if (cin.fail() || size > MAX_SCORES || size < 1)
 		{
-			cout << "Please enter a number between 1 and 100." << endl;
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			cout << "Please enter a number between 1 and " << MAX_SCORES << "." << endl;
 			continue;
 		}
 
@@ -73,23 +56,26 @@ void TestScores::testScores() {
 		{
 			cout << "Enter score number #" << i + 1 << ": ";
 			cin >> scores[i];
+
+			while (cin.fail())
+			{
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				cout << "Invalid score. Please enter an integer: ";
+				cin >> scores[i];
+			}
 		}
 
-		calculateAverage(scores, size);
-		findMax(scores, size);
-		findMin(scores, size);
-
-		cout << "Would you like to enter more scores? [y/n]: ";
-		cin >> yn;
-
-		cont = (yn == 'y' || yn == 'Y');
+		calculateScores(scores, size);
+		
+		cont = yesNo("Would you like to enter more scores?");
+	
 
 	} while (cont);
 
-	cout << "Would you like to go back to the menu? [y/n]: ";
-	cin >> yn;
+	
 
-	if (yn == 'y' || yn == 'Y')
+	if (yesNo("Would you like to go back to the menu?"))
 	{
 		MainMenu menu;
 		menu.mainMenu();
