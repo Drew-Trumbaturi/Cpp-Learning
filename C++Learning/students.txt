@@ -1,0 +1,20 @@
+Alice 88 90 82 79
+Bob 75 69
+Charlie 95 100 98 94 97
+Diana 62 70 65 60
+Ethan 45 58 50 40 30
+Fiona 82 85 87 90
+George 91 89 93 88
+Hannah 100 100 100 99 98 97
+Ian 73 77 74
+Julia 59 61 60 58
+Kevin 85 86 84 87 83
+Laura 92 95
+MaryJane 70 72 74 68 69
+Nathan 88 90 85
+Olivia 100 95 90 92
+Peter 55 60 65
+Quincy 99 98 97 96 95 94
+Rachel 80 78
+Steve 61 63 65 67
+Tina 45 50

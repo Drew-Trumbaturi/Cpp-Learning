@@ -128,14 +128,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="C++Learning.cpp" />
+    <ClCompile Include="GradeManager.cpp" />
     <ClCompile Include="IsEven.cpp" />
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="TestScores.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GradeManager.h" />
     <ClInclude Include="IsEven.h" />
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="TestScores.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="students.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

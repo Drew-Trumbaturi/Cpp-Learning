@@ -7,6 +7,7 @@
 #include "IsEven.h"
 #include "TestScores.h"
 #include "MainMenu.h"
+#include "GradeManager.h"
 
 using namespace std;
 
@@ -29,7 +30,8 @@ void displayMenu(const vector<string>& options, int selected) {
 void MainMenu::mainMenu() {
 	vector<string> options = {
 		"Is Even\n\tDescription:\n\tAsks the user to input a number and checks if it is even,\n\tthen shows all the numbers from 0 to n that are even.",
-		"Test Scores\n\tDescription:\n\tGets the user to input a desired amount of test scores,\n\tthen shows the average, min, and max of the scores."
+		"Test Scores\n\tDescription:\n\tGets the user to input a desired amount of test scores,\n\tthen shows the average, min, and max of the scores.",
+		"Grade Score Manager\n\tDescription:\n\tTBD"
 	};
 
 	int selected = 0;
@@ -78,6 +80,13 @@ void MainMenu::mainMenu() {
 	{
 		TestScores scores;
 		scores.testScores();
+	}
+	break;
+
+	case 2:
+	{
+		GradeManager grade;
+		grade.gradeManager();
 	}
 	break;
 

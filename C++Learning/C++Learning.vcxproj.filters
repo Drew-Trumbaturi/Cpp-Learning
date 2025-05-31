@@ -13,19 +13,37 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="IsEven">
+      <UniqueIdentifier>{e4d8ec11-88cf-464d-951d-a35eee48abd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestScores">
+      <UniqueIdentifier>{6f4cd133-2353-4bf5-a9d9-c58cbc3dc354}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menus">
+      <UniqueIdentifier>{5dbdccce-3bd8-401a-a8ac-e4c8ace59a07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Student Grade Manager">
+      <UniqueIdentifier>{2441c2b5-cb60-496a-9485-d90b3512b6ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Student Grade Manager\Grade Files">
+      <UniqueIdentifier>{bfb46103-599e-41cc-9906-653372911a0f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C++Learning.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="IsEven.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>IsEven</Filter>
     </ClCompile>
     <ClCompile Include="TestScores.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>TestScores</Filter>
     </ClCompile>
     <ClCompile Include="MainMenu.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="GradeManager.cpp">
+      <Filter>Student Grade Manager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -38,5 +56,13 @@
     <ClInclude Include="MainMenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="GradeManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="students.txt">
+      <Filter>Student Grade Manager\Grade Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
