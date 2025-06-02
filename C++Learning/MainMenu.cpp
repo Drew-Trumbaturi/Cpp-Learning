@@ -8,6 +8,7 @@
 #include "TestScores.h"
 #include "MainMenu.h"
 #include "GradeManager.h"
+#include "LibraryMenu.h"
 
 using namespace std;
 
@@ -32,6 +33,7 @@ void MainMenu::mainMenu() {
 		"Is Even\n\tDescription:\n\tAsks the user to input a number and checks if it is even,\n\tthen shows all the numbers from 0 to n that are even.",
 		"Test Scores\n\tDescription:\n\tGets the user to input a desired amount of test scores,\n\tthen shows the average, min, and max of the scores.",
 		"Grade Score Manager\n\tDescription:\n\tReads from a provided \".txt\" file then calculates the averages of each students grade,\n\tand give them a letter grade and ouputs to a new \".txt\" file.",
+		"Library Book Manager\n\tDescription:\n\tTBD",
 	};
 
 	int selected = 0;
@@ -87,6 +89,13 @@ void MainMenu::mainMenu() {
 	{
 		GradeManager grade;
 		grade.gradeManager();
+	}
+	break;
+
+	case 3:
+	{
+		LibraryMenu menu;
+		menu.menu();
 	}
 	break;
 

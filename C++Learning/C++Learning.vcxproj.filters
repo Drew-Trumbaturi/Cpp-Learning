@@ -28,6 +28,18 @@
     <Filter Include="Student Grade Manager\Grade Files">
       <UniqueIdentifier>{bfb46103-599e-41cc-9906-653372911a0f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="LibraryBookManager">
+      <UniqueIdentifier>{89fe220e-2037-41a2-a8c2-0cf472a54d98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LibraryBookManager\Menus">
+      <UniqueIdentifier>{f93688cc-8f25-45ed-bcc6-69a18fd46c8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LibraryBookManager\Files">
+      <UniqueIdentifier>{59017a93-038e-48df-82fc-07a1e4894133}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LibraryBookManager\Headers">
+      <UniqueIdentifier>{0672c7ab-8f48-4847-b3dd-86cb0b018cb3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C++Learning.cpp">
@@ -45,6 +57,15 @@
     <ClCompile Include="GradeManager.cpp">
       <Filter>Student Grade Manager</Filter>
     </ClCompile>
+    <ClCompile Include="CatalogManager.cpp">
+      <Filter>LibraryBookManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Book.cpp">
+      <Filter>LibraryBookManager</Filter>
+    </ClCompile>
+    <ClCompile Include="LibraryMenu.cpp">
+      <Filter>LibraryBookManager\Menus</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IsEven.h">
@@ -59,10 +80,22 @@
     <ClInclude Include="GradeManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Book.h">
+      <Filter>LibraryBookManager\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="LibraryMenu.h">
+      <Filter>LibraryBookManager\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="CatalogManager.h">
+      <Filter>LibraryBookManager\Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="students.txt">
       <Filter>Student Grade Manager\Grade Files</Filter>
+    </Text>
+    <Text Include="books.txt">
+      <Filter>LibraryBookManager\Files</Filter>
     </Text>
   </ItemGroup>
 </Project>

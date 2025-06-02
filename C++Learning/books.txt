@@ -1,0 +1,9 @@
+The Hobbit,J.R.R. Tolkien,1937,19.99
+1984,George Orwell,1949,14.99
+Dune,Frank Herbert,1965,22.50
+Pride and Prejudice,Jane Austen,1813,9.99
+The Catcher in the Rye,J.D. Salinger,1951,13.50
+To Kill a Mockingbird,Harper Lee,1960,15.25
+The Great Gatsby,F. Scott Fitzgerald,1925,10.75
+The Derka Adventures,The Derkaman,1994,420.69
+I don't know babe,Brittany Stokes,2025,30
